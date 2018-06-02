@@ -10,7 +10,7 @@
 using namespace std;
 using namespace cv;
 
-#define TRAIN_RATIO 1
+#define TRAIN_RATIO 0.7
 #define DICTIONARY_BUILD 0
 
 Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d);
@@ -374,15 +374,15 @@ int main(){
     float RBF_C[] = { 1.4,1.43,1.46,1.49,10,15,20,25,100,150,200,250};
     float RBF_gamma[] = { 0.01, 0.1, 1};
     
-        for(int gamma = 0;gamma < 3; gamma++){
-        for(int cenas = 0; cenas <= 12; cenas++)
-    {   
+    float CVal = 1.42;
+    float GammaVal = 1;
+
         cout << "_-------------------------------------" << endl;
         cout << "_-------------------------------------" << endl;
         cout << "_-------------------------------------" << endl;
         cout << "_-------------------------------------" << endl;
         cout << "_-------------------------------------" << endl;
-        cout << "C: " << RBF_C[cenas] << "  Gamma: "<< RBF_gamma[gamma] << endl;
+        //cout << "C: " << RBF_C[cenas] << "  Gamma: "<< RBF_gamma[gamma] << endl;
         cout << "_-------------------------------------" << endl;
         cout << "_-------------------------------------" << endl;
         cout << "_-------------------------------------" << endl;
@@ -415,8 +415,8 @@ int main(){
 
         oneToAllSVM[class_name] = ml::SVM::create();
         oneToAllSVM[class_name]->setKernel(ml::SVM::RBF);
-        oneToAllSVM[class_name]->setC(RBF_C[cenas]);
-        oneToAllSVM[class_name]->setGamma(RBF_gamma[gamma]);
+        oneToAllSVM[class_name]->setC(CVal);
+        oneToAllSVM[class_name]->setGamma(GammaVal);
 
         Ptr<ml::TrainData> dataclassTrain = ml::TrainData::create(samples_32f, ml::ROW_SAMPLE, labels);
         
@@ -467,33 +467,86 @@ int main(){
         input.copyTo(imgMid);
         // showImage("Detect",imgMid);
 
-        detector->detect(imgMid,keypoints);
+
+        int width = imgMid.cols;
+        int height = imgMid.rows;
+        
+        Mat m1 = Mat::zeros(height,width,CV_8UC1);
+        map<string, Mat> outputImage;
+
+        outputImage["ancora"].create(height, width, CV_8UC1);
+        outputImage["ancora"] = Mat::zeros(height,width,CV_8UC1);
+        outputImage["fundo"].create(height, width, CV_8UC1);
+        outputImage["fundo"] = Mat::zeros(height,width,CV_8UC1);
+        
+        int xRoot = 0; int xIter = 0;
+        int yRoot = 0; int yIter = 0;
+        int xCropPixels = width/4;
+        int yCropPixels = height/4;
+
+        for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){
+           
+            for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/5,xIter++){
+             
+                //cout << "xRoot = " << xRoot<< "yRoot = " << yRoot << endl;
+
+                cv::Rect ROI(xRoot,yRoot,xCropPixels,yCropPixels);
+
+                cv::Mat croppedMat(imgMid,ROI);
+
+                //showImage("crop",croppedMat);
+
+                detector->detect(croppedMat,keypoints);
+                cout << "keypoints" << keypoints.size();
+                if(keypoints.size() > 0){
+
+                bowDE.compute(croppedMat, keypoints, bowDescriptors);
+                // cout << "keypoints size" << keypoints.size() << endl;
+                // cout << "Descriptors size" << bowDescriptors.size() << endl;
+                
+                
+
+                    for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
+                        float res = (*it).second->predict(bowDescriptors);
+                        cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
+
+                        if(res)
+                        {for(int i = 0; i < xCropPixels; i++){
+                            for(int j = 0; j <yCropPixels; j++){
+                                outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
+                            }                  
+                        }      
+                        } 
+
+                    }
+                    
+                }
+
+            }
+        }
+        for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
+        showImage((*it).first,outputImage[(*it).first]);
+        outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
+        }
+        
+        
         // cout << train1Counter << " Keypoints" << endl;
         // Mat outimg;
         // drawKeypoints(input,keypoints,outimg,Scalar(0,0,255));
         // showImage("Keypoints",outimg);
-        if(keypoints.size() > 0){
 
-            bowDE.compute(imgMid, keypoints, bowDescriptors);
-            // cout << "keypoints size" << keypoints.size() << endl;
-            // cout << "Descriptors size" << bowDescriptors.size() << endl;
-            
-            hash<int> results;
+          
 
-            for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it != oneToAllSVM.end();++it){
-                float res = (*it).second->predict(bowDescriptors);
-                cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
 
-    
-            }
-        }  }
+    }
         // descriptors = descriptorsFromKeypointFile("ancora",class1numberList[train1Counter],"grayKeypoints",bowDE);
         // for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it != oneToAllSVM.end();++it){
         //     float res = (*it).second->predict(bowDescriptors);
         //     cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
         // }
 
-    }}
+    
+    
 
     for(int i = 0;i < 30;i++){
 

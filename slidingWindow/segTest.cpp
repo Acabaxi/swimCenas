@@ -86,8 +86,7 @@ int main(int argn, char **argv)
         //     showImage("Laplace",imgLap);
         // }
 
-        int width = input.cols;
-        int height = input.rows;
+        
 
         Mat m1 = Mat::zeros(height,width,CV_8UC1);
         cout << "Height "<<height << "Width " <<width << endl;
@@ -105,6 +104,9 @@ int main(int argn, char **argv)
         
         imgSplit[1].copyTo(saturationLayer);
 
+        int width = input.cols;
+        int height = input.rows;
+        
         int xRoot = 0; int xIter = 0;
         int yRoot = 0; int yIter = 0;
         int xCropPixels = width/6;
