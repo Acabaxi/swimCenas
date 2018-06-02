@@ -1,0 +1,3 @@
+/home/pedro/stuff/imagens/slidingWindow/CMakeFiles/rebuild_cache.dir
+/home/pedro/stuff/imagens/slidingWindow/CMakeFiles/seg.dir
+/home/pedro/stuff/imagens/slidingWindow/CMakeFiles/edit_cache.dir

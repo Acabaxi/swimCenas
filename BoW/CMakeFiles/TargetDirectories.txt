@@ -1,0 +1,3 @@
+/home/pedro/stuff/imagens/BoW/CMakeFiles/rebuild_cache.dir
+/home/pedro/stuff/imagens/BoW/CMakeFiles/bow.dir
+/home/pedro/stuff/imagens/BoW/CMakeFiles/edit_cache.dir

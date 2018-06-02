@@ -1,0 +1,3230 @@
+Loading dictionary
+Training SVM
+Ancoras train descriptors
+178
+done
+1
+196
+done
+2
+155
+done
+3
+131
+done
+4
+127
+done
+5
+176
+done
+6
+164
+done
+7
+140
+done
+8
+177
+done
+9
+183
+done
+10
+190
+done
+11
+162
+done
+12
+172
+done
+13
+171
+done
+14
+147
+done
+15
+143
+done
+16
+133
+done
+17
+153
+done
+18
+174
+done
+19
+113
+done
+20
+118
+done
+21
+148
+done
+22
+145
+done
+23
+134
+done
+24
+161
+done
+25
+104
+done
+26
+125
+done
+27
+191
+done
+28
+157
+done
+29
+151
+done
+30
+184
+done
+31
+201
+done
+32
+139
+done
+33
+132
+done
+34
+165
+done
+35
+169
+done
+36
+199
+done
+37
+163
+done
+38
+108
+done
+39
+128
+done
+40
+146
+done
+41
+123
+done
+42
+136
+done
+43
+116
+done
+44
+105
+done
+45
+107
+done
+46
+187
+done
+47
+193
+done
+48
+168
+done
+49
+115
+done
+50
+130
+done
+51
+170
+done
+52
+103
+done
+53
+109
+done
+54
+166
+done
+55
+160
+done
+56
+122
+done
+57
+198
+done
+58
+114
+done
+59
+110
+done
+60
+152
+done
+61
+135
+done
+62
+188
+done
+63
+156
+done
+64
+119
+done
+65
+120
+done
+66
+126
+done
+67
+137
+done
+68
+179
+done
+69
+149
+done
+70
+200
+done
+71
+181
+done
+72
+158
+done
+73
+124
+done
+74
+173
+done
+75
+175
+done
+76
+150
+done
+77
+121
+done
+78
+106
+done
+79
+129
+done
+80
+159
+done
+81
+141
+done
+82
+138
+done
+83
+186
+done
+84
+142
+done
+85
+111
+done
+86
+167
+done
+87
+112
+done
+88
+192
+done
+89
+202
+done
+90
+182
+done
+91
+195
+done
+92
+194
+done
+93
+180
+done
+94
+197
+done
+95
+144
+done
+96
+154
+done
+97
+189
+done
+98
+185
+done
+99
+Fundo Train descriptors
+43
+26
+2
+22
+36
+8
+37
+75
+11
+64
+29
+73
+53
+69
+61
+49
+45
+77
+13
+78
+28
+32
+94
+14
+96
+76
+91
+16
+25
+21
+67
+84
+46
+15
+79
+57
+3
+18
+40
+17
+41
+98
+31
+10
+83
+42
+70
+66
+81
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.4  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.43  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.46  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.49  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 10  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 15  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 20  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 25  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 100  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 150  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 200  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 250  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 127.625  Gamma: 0.01
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.4  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.43  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.46  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.49  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 10  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 15  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 20  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 25  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 100  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 150  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 200  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 250  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 127.625  Gamma: 0.1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.4  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.43  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.46  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 1
+Classifier: fundoPrediction: 0
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 1.49  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 10  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 15  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 20  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 25  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 100  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 150  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 200  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 250  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+C: 127.625  Gamma: 1
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+_-------------------------------------
+ancora Classifier
+fundo Classifier
+Testing SVMs
+/home/pedro/stuff/imagens/ancora/test/NP_1.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_2.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_3.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_4.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_5.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_6.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_7.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_8.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_9.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_10.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_11.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_12.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_13.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_14.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_15.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_16.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_17.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+/home/pedro/stuff/imagens/ancora/test/NP_18.jpg
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7902
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 10982
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7725
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7902
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7693
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7693
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11083
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11588
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9627
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7693
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11588
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 10982
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11588
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11083
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11588
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 11083
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9627
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9627
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9627
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9429
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9429
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9429
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7902
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7725
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7725
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7693
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7693
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7902
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 7681
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
+100 Keypoints
+keypoints size 9384
+Descriptors size [1000 x 1]
+Classifier: ancoraPrediction: 0
+Classifier: fundoPrediction: 1
