@@ -10,7 +10,7 @@
 using namespace std;
 using namespace cv;
 
-#define TRAIN_RATIO 0.8
+#define TRAIN_RATIO 1
 #define DICTIONARY_BUILD 0
 
 Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d);
@@ -67,7 +67,8 @@ Mat segmentMask(Mat imgsrc, int value, int isDebug){
     Mat bigcross = getStructuringElement(MORPH_RECT,  Size(50,50));
     dilate(imgMask,imgMask,bigcross); 
 
-    bitwise_and(imgGray,imgMask,imgGray);
+    imgsrc.copyTo(imgGray,imgMask);
+    //bitwise_and(imgsrc,imgMask,imgGray);
 
     if(isDebug){
         showImage("Mask",imgMask);
@@ -118,7 +119,7 @@ int main(){
     BOWImgDescriptorExtractor bowDE(detector, matcher);
 
 
-    int dictionarySamples = 10;
+    int dictionarySamples = 100;
 
     vector<int> class1numberList;
     int class1imageNumber = 100;
@@ -216,10 +217,24 @@ int main(){
         // showImage("input",input);
 
         imgMasked = segmentMask(input,100,0);
-      
-        //Feature extraction
+        //showImage("asd",imgMasked);
         
-        descriptors = extractDescriptors(imgMasked,f2d);
+        Mat gray;
+        cvtColor(imgMasked,gray,CV_BGR2YUV);
+
+        vector<Mat> imgYUV;
+        Mat imgUV;
+        split(gray,imgYUV);
+
+        
+        Mat UVMat[] = {imgYUV[1],imgYUV[2]};
+        merge(UVMat,2,imgUV);
+
+
+        //Feature extraction
+
+        
+        descriptors = extractDescriptors(imgUV,f2d);
         featuresUnclustered.push_back(descriptors);
     }
 
@@ -239,11 +254,19 @@ int main(){
         input = imread(filename);
         // showImage("input",input);
 
-        cvtColor(input,imgMasked,CV_BGR2GRAY);
+        Mat gray;
+        cvtColor(input,gray,CV_BGR2YUV);
 
+        vector<Mat> imgYUV;
+        Mat imgUV;
+        split(gray,imgYUV);
+
+        
+        Mat UVMat[] = {imgYUV[1],imgYUV[2]};
+        merge(UVMat,2,imgUV);
         //Feature extraction
         
-        descriptors = extractDescriptors(imgMasked,f2d);
+        descriptors = extractDescriptors(imgUV,f2d);
         featuresUnclustered.push_back(descriptors);
     }
 
@@ -263,7 +286,7 @@ int main(){
 
     char* dicNumber = new char[20];
     sprintf(dicNumber, "%d", dictionarySamples);
-    string dictionaryFile = "dictionaryLowRes_" + string(dicNumber) + ".yml";
+    string dictionaryFile = "dictionaryYUV_" + string(dicNumber) + ".yml";
     
     FileStorage fs(dictionaryFile, FileStorage::WRITE);
     if(fs.isOpened()){
@@ -278,7 +301,7 @@ int main(){
 
     Mat dictionary;
 
-    FileStorage fs("dictionaryLowRes_100.yml", cv::FileStorage::READ);
+    FileStorage fs("dictionaryYUV_100.yml", cv::FileStorage::READ);
     if(fs.isOpened())
     {
         cout<<"Loading dictionary" <<endl;
@@ -311,16 +334,29 @@ int main(){
         cout << fileNumber << endl;
         input = imread(filename);
 
-            
-        imgGray = segmentMask(input,100,0);
+
+
+        Mat gray;
+        cvtColor(input,gray,CV_BGR2YUV);
+
+        vector<Mat> imgYUV;
+        Mat imgUV;
+        split(gray,imgYUV);
+
+        
+        Mat UVMat[] = {imgYUV[1],imgYUV[2]};
+        merge(UVMat,2,imgUV);
+
+        
+        //imgGray = segmentMask(input,100,0);
         
         Mat descriptors;
         
-        detector->detect(imgGray,keypoints); 
+        detector->detect(imgUV,keypoints); 
         
         if(keypoints.size() > 0){
 
-            bowDE.compute(imgGray, keypoints, bowDescriptors);
+            bowDE.compute(imgUV, keypoints, bowDescriptors);
 
             if(mapTrainingData.count("ancora") == 0){
                 mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
@@ -341,7 +377,7 @@ int main(){
     }
 
     cout << "Fundo Train descriptors" << endl;
-    for(train2Counter = 1; train2Counter < 50;train2Counter++){
+    for(train2Counter = 1; train2Counter < 75;train2Counter++){
     // for(train2Counte"r = 1; train2Counter < TRAIN_RATIO * class2numberList.size();train2Counter++){
         
         Mat imgGray;
@@ -352,12 +388,27 @@ int main(){
         cout << fileNumber << endl;
         input = imread(filename);
 
-        cvtColor(input,imgGray,CV_BGR2GRAY);
+        //cvtColor(input,imgGray,CV_BGR2GRAY);
 
-        detector->detect(imgGray,keypoints); 
+
+
+        Mat gray;
+        cvtColor(input,gray,CV_BGR2YUV);
+
+        vector<Mat> imgYUV;
+        Mat imgUV;
+        split(gray,imgYUV);
+
+        
+        Mat UVMat[] = {imgYUV[1],imgYUV[2]};
+        merge(UVMat,2,imgUV);
+
+
+        detector->detect(imgUV,keypoints); 
+
         if(keypoints.size() > 0){ 
            // cout << "oi" << endl;
-            bowDE.compute(imgGray, keypoints, bowDescriptors);
+            bowDE.compute(imgUV, keypoints, bowDescriptors);
 
             if(mapTrainingData.count("fundo") == 0){
                 mapTrainingData["fundo"].create(0, bowDescriptors.cols, bowDescriptors.type());
@@ -448,8 +499,24 @@ int main(){
         cout << filename << endl;
         string maskFilename = "/home/pedro/stuff/imagens/ancora/test_mask/NP_" + string(fileNumber) + ".jpg";
 
-        input = imread(filename, CV_LOAD_IMAGE_GRAYSCALE);
+        input = imread(filename);
+
+
+
+
+
+        Mat gray;
+        cvtColor(input,gray,CV_BGR2YUV);
+
+        vector<Mat> imgYUV;
+        Mat imgUV;
+        split(gray,imgYUV);
+
         
+        Mat UVMat[] = {imgYUV[1],imgYUV[2]};
+        merge(UVMat,2,imgUV);
+        
+
         // cvtColor(input,imgOut,CV_BGR2HSV);
 
         // vector<cv::Mat> arrHSV;
@@ -465,7 +532,7 @@ int main(){
         
         // showImage("Mask",input);
         
-        input.copyTo(imgMid);
+        imgUV.copyTo(imgMid);
         // showImage("Detect",imgMid);
 
 
@@ -482,19 +549,19 @@ int main(){
         
         int xRoot = 0; int xIter = 0;
         int yRoot = 0; int yIter = 0;
-        int xCropPixels = width/8;
-        int yCropPixels = height/8;
+        int xCropPixels = width/4;
+        int yCropPixels = height/4;
 
-        for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){
+        for(yRoot = 0; yRoot+yCropPixels <= height; yRoot += height/8,yIter++ ){
            
-            for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/8,xIter++){
+            for(xRoot = 0; xRoot+xCropPixels <= width; xRoot += width/8,xIter++){
              
                 //cout << "xRoot = " << xRoot<< "yRoot = " << yRoot << endl;
 
                 cv::Rect ROI(xRoot,yRoot,xCropPixels,yCropPixels);
 
                 cv::Mat croppedMat(imgMid,ROI);
-
+                cv::Mat originalCrop(imgYUV[0],ROI);
                 //showImage("crop",croppedMat);
 
                 detector->detect(croppedMat,keypoints);
@@ -514,7 +581,7 @@ int main(){
                         if(res)
                         {for(int i = 0; i < xCropPixels; i++){
                             for(int j = 0; j <yCropPixels; j++){
-                                outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
+                                outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = originalCrop.at<uchar>(j,i);
                             }                  
                         }      
                         } 
