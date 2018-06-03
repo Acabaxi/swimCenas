@@ -88,17 +88,25 @@ int main(int argn, char **argv)
 
         
 
-        Mat m1 = Mat::zeros(height,width,CV_8UC1);
-        cout << "Height "<<height << "Width " <<width << endl;
-        showImage("welele",m1);
-        showImage("asd",input);
+        
 
         Mat imgBlurMask;
         Mat imgBlur;
             
         Mat masked;
         Mat gray;
-        cvtColor(input,gray,CV_BGR2GRAY);
+        cvtColor(input,gray,CV_BGR2YUV);
+
+        vector<Mat> imgYUV;
+        Mat imgUV;
+        split(gray,imgYUV);
+
+        
+        Mat UVMat[] = {imgYUV[1],imgYUV[2]};
+        merge(UVMat,2,imgUV);
+
+        
+
 
         Mat saturationLayer;
         
@@ -106,6 +114,9 @@ int main(int argn, char **argv)
 
         int width = input.cols;
         int height = input.rows;
+
+        Mat m1 = Mat::zeros(height,width,CV_8UC1);
+        
         
         int xRoot = 0; int xIter = 0;
         int yRoot = 0; int yIter = 0;

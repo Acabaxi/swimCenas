@@ -10,7 +10,7 @@
 using namespace std;
 using namespace cv;
 
-#define TRAIN_RATIO 0.7
+#define TRAIN_RATIO 0.8
 #define DICTIONARY_BUILD 0
 
 Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d);
@@ -311,6 +311,7 @@ int main(){
         cout << fileNumber << endl;
         input = imread(filename);
 
+            
         imgGray = segmentMask(input,100,0);
         
         Mat descriptors;
@@ -481,12 +482,12 @@ int main(){
         
         int xRoot = 0; int xIter = 0;
         int yRoot = 0; int yIter = 0;
-        int xCropPixels = width/4;
-        int yCropPixels = height/4;
+        int xCropPixels = width/8;
+        int yCropPixels = height/8;
 
         for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){
            
-            for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/5,xIter++){
+            for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/8,xIter++){
              
                 //cout << "xRoot = " << xRoot<< "yRoot = " << yRoot << endl;
 
