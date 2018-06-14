@@ -416,6 +416,7 @@ int main(){
 
         oneToAllSVM[class_name] = ml::SVM::create();
         oneToAllSVM[class_name]->setKernel(ml::SVM::RBF);
+        oneToAllSVM[class_name]->setType(ml::SVM::C_SVC);
         oneToAllSVM[class_name]->setC(CVal);
         oneToAllSVM[class_name]->setGamma(GammaVal);
 
@@ -482,8 +483,8 @@ int main(){
         
         int xRoot = 0; int xIter = 0;
         int yRoot = 0; int yIter = 0;
-        int xCropPixels = width/8;
-        int yCropPixels = height/8;
+        int xCropPixels = width/4;
+        int yCropPixels = height/4;
 
         for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){
            
