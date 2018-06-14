@@ -467,6 +467,7 @@ int main(){
 
         oneToAllSVM[class_name] = ml::SVM::create();
         oneToAllSVM[class_name]->setKernel(ml::SVM::RBF);
+        oneToAllSVM[class_name]->setType(ml::SVM::C_SVC);
         oneToAllSVM[class_name]->setC(CVal);
         oneToAllSVM[class_name]->setGamma(GammaVal);
 
