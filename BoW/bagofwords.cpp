@@ -10,8 +10,10 @@
 using namespace std;
 using namespace cv;
 
-#define TRAIN_RATIO 0.8
+#define TRAIN_RATIO 0.7
 #define DICTIONARY_BUILD 0
+
+#define NAMEFILE_CONFIG_PARAM "param_config.xml"
 
 Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d);
 Mat segmentMask(Mat imgsrc, int value, int isDebug);
@@ -64,14 +66,17 @@ Mat segmentMask(Mat imgsrc, int value, int isDebug){
 
     cvtColor(imgsrc,imgGray,CV_BGR2GRAY);
     
-    Mat bigcross = getStructuringElement(MORPH_RECT,  Size(50,50));
+    Mat bigcross = getStructuringElement(MORPH_RECT,  Size(30,30));
+
     dilate(imgMask,imgMask,bigcross); 
 
     bitwise_and(imgGray,imgMask,imgGray);
 
     if(isDebug){
-        showImage("Mask",imgMask);
-        showImage("Masked",imgGray);
+        //showImage("Mask",imgMask);
+        //showImage("Masked",imgGray);
+        
+        return imgMask;
     }
 
     return imgGray;
@@ -96,7 +101,105 @@ Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d){
     return descriptors;
 }
 
+struct config_parameters
+
+{
+    std::string corePath;
+    std::string maskPath;
+    std::string dictionaryPath;
+    std::string testPath;
+
+    std::string nameFiles;
+    std::vector<std::string> filepaths_objs;
+    int number_objects;
+    int number_samplesPerTrialObject;
+    int number_TrialsPerObject;  //! tag "number_TrialsPerObject". [1..number_TrialsPerObject]
+
+};
+
+void load_config(config_parameters & pconfig, char * filename)
+{
+    cv::FileStorage fs(filename, cv::FileStorage::READ);
+    if(fs.isOpened())
+    {
+        fs["corePath"]                >> pconfig.corePath;
+        fs["maskPath"]                >> pconfig.maskPath;
+        fs["dictionaryPath"]          >> pconfig.dictionaryPath;
+        fs["testPath"]                >> pconfig.testPath;
+        fs["nameFiles"]               >> pconfig.nameFiles;
+        fs["number_objects"]          >> pconfig.number_objects;
+        fs["number_samplesPerTrialObject"]   >> pconfig.number_samplesPerTrialObject;
+        fs["number_TrialsPerObject"]  >> pconfig.number_TrialsPerObject;
+
+
+        cv::FileNode features   = fs["filepaths_objs"];
+        cv::FileNodeIterator it = features.begin(), it_end = features.end();
+        for( ; it != it_end; ++it )
+            pconfig.filepaths_objs.push_back((*it));
+        fs.release();
+    }
+    return;
+}
+
+void save_config()
+{
+    std::string corePath        = "/home/pedro/stuff/imagens";
+    std::vector<std::string> filepaths_objs;
+    filepaths_objs.push_back("fundo");
+    filepaths_objs.push_back("ancora");
+    
+    int number_objects          = filepaths_objs.size();
+    std::string maskPath        = "/mask/";
+    std::string testPath        = "/test/";
+    std::string dictionaryPath  = "/dictionary/";
+    
+    int number_samplesPerTrialObject = 70;
+    
+    std::string nameFiles       = "/";
+    int number_TrialsPerObject     = 4;
+
+
+    cv::FileStorage fs_conf(NAMEFILE_CONFIG_PARAM, cv::FileStorage::WRITE);
+    if(fs_conf.isOpened())
+    {
+        fs_conf << "corePath"                << corePath;
+        fs_conf << "maskPath"                << maskPath;
+        fs_conf << "testPath"                << testPath;
+        fs_conf << "dictionaryPath"          << dictionaryPath;
+    
+        fs_conf << "nameFiles"               << nameFiles;
+        fs_conf << "number_objects"          << number_objects;
+        fs_conf << "number_samplesPerTrialObject"   << number_samplesPerTrialObject;
+        fs_conf << "filepaths_objs"          << filepaths_objs;
+        fs_conf << "number_TrialsPerObject"  << number_TrialsPerObject;
+        fs_conf.release();
+    }
+    return;
+}
+
+void print_config(config_parameters pconfig)
+{
+        std::cout<<"corePath: "                 << pconfig.corePath<<std::endl;
+        std::cout<<"maskPath: "                 << pconfig.maskPath<<std::endl;
+        std::cout<<"testPath: "                 << pconfig.testPath<<std::endl;
+        std::cout<<"dictionaryPath: "           << pconfig.dictionaryPath<<std::endl;
+        
+        std::cout<<"nameFiles: "                << pconfig.nameFiles<<std::endl;
+        std::cout<<"number_objects: "           << pconfig.number_objects<<std::endl;
+        std::cout<<"number_TrialsPerObject: "   << pconfig.number_TrialsPerObject<<std::endl;
+        std::cout<<"number_samplesPerTrialObject: "    << pconfig.number_samplesPerTrialObject<<std::endl;
+        for( int i = 0; i < pconfig.filepaths_objs.size(); i++ )
+            std::cout<<" ->"<<pconfig.filepaths_objs[i]<<std::endl;
+
+    return;
+}
 int main(){
+
+    config_parameters pconfig;
+    load_config(pconfig,NAMEFILE_CONFIG_PARAM);
+    // save_config();
+
+    print_config(pconfig);
 
     srand ( unsigned ( time(0) ) );
     Mat input;
@@ -122,7 +225,7 @@ int main(){
 
     vector<int> class1numberList;
     int class1imageNumber = 100;
-    int resolutionRoot = 103; //1 - High res, 101 - Low res, 202 - Medium res
+    int resolutionRoot = 1; //1 - High res, 101 - Low res, 202 - Medium res
 
 
     vector<int> class2numberList;
@@ -297,75 +400,166 @@ int main(){
     int train2Counter;
     cout << "Ancoras train descriptors" << endl;
     
-    
-    
-    int listSize = class1numberList.size() * TRAIN_RATIO;
-    // #pragma omp parallel for ordered schedule(dynamic,3)
-    for(train1Counter = 1; train1Counter < listSize;train1Counter++){
-        
-        Mat imgGray;
+    int obj_idx = 0;
 
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", class1numberList[train1Counter]);
-        string filename = "/home/pedro/stuff/imagens/ancora/dictionary/" + string(fileNumber) + ".jpg";
-        cout << fileNumber << endl;
-        input = imread(filename);
+    //#pragma omp parallel for ordered schedule(dynamic,3)
+    for(obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
+        
+        
+        
+        /*Escolher imagens aleatórias para treino*/
+
+        vector<int> numberList;
+        for(int i = 1; i < 101; i++) 
+            numberList.push_back(i);
+        
+        random_shuffle(numberList.begin(),numberList.end());
+
+        int listSize;
+
+        cout << "--------------- Training " << pconfig.filepaths_objs[obj_idx] << endl;
+        if(pconfig.filepaths_objs[obj_idx].compare("fundo") == 0){
+            listSize = 50;
+        }
+        else
+            listSize = pconfig.number_samplesPerTrialObject;
+
+        #pragma omp parallel for ordered schedule(dynamic,3)
+        for(int counter = 0; counter < listSize; counter++){
 
             
-        imgGray = segmentMask(input,100,0);
-        
-        Mat descriptors;
-        
-        detector->detect(imgGray,keypoints); 
-        
-        if(keypoints.size() > 0){
 
-            bowDE.compute(imgGray, keypoints, bowDescriptors);
+            Mat inputIMG, inputMask;
+            Mat grayIMG;
+            vector<KeyPoint> keypointsIMG;
+            Mat bowDescriptorsIMG;
 
-            if(mapTrainingData.count("ancora") == 0){
-                mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
+            char* fileNumber = new char[20];
+            
+            sprintf(fileNumber, "%d", numberList[counter]);
+            cout << fileNumber << endl;
+            string filenameMask = pconfig.corePath + "/" + pconfig.filepaths_objs[obj_idx] 
+                        + pconfig.maskPath + string(fileNumber) + ".jpg";
+
+            string filenameIMG = pconfig.corePath + "/" + pconfig.filepaths_objs[obj_idx] 
+                        + pconfig.dictionaryPath + string(fileNumber) + ".jpg";
+
+            /*Read IMGs*/            
+            inputIMG = imread(filenameIMG);       
+            inputMask = imread(filenameMask,CV_LOAD_IMAGE_GRAYSCALE); //Grayscale because masks in copyTo need to have 1 single channel
+
+            
+            /*Color conversion in input image*/
+            cvtColor(inputIMG, grayIMG, CV_BGR2GRAY);
+
+            /*Apply Mask*/
+            Mat maskedGray;
+            grayIMG.copyTo(maskedGray, inputMask);
+
+            //showImage("asd", maskedGray);
+            
+            detector->detect(maskedGray,keypointsIMG); 
+
+            if(keypointsIMG.size() > 0){
+
+                bowDE.compute(maskedGray, keypointsIMG, bowDescriptorsIMG);
+
+                if(mapTrainingData.count(pconfig.filepaths_objs[obj_idx]) == 0){
+                    mapTrainingData[pconfig.filepaths_objs[obj_idx]].create(0, bowDescriptorsIMG.cols, bowDescriptorsIMG.type());
+                }
+                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(bowDescriptorsIMG);
+
             }
-            mapTrainingData["ancora"].push_back(bowDescriptors);
-        }
-        cout << "done" << endl;
-        cout << train1Counter <<endl;
-        
-        // descriptors = descriptorsFromKeypointFile("ancora",class1numberList[train1Counter],"maskKeypoints",bowDE);
-        
-        // if(mapTrainingData.count("ancora") == 0){
-        //     mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
-        // }
-        // mapTrainingData["ancora"].push_back(bowDescriptors);
+
+
+
+            //showImage("masked",inputIMG);
+        }        
+
+
+        cout << pconfig.filepaths_objs[obj_idx] << " done \n";
         
 
     }
+    
 
-    cout << "Fundo Train descriptors" << endl;
-    for(train2Counter = 1; train2Counter < 50;train2Counter++){
-    // for(train2Counte"r = 1; train2Counter < TRAIN_RATIO * class2numberList.size();train2Counter++){
+
+    // int listSize = class1numberList.size() * TRAIN_RATIO;
+    // // #pragma omp parallel for ordered schedule(dynamic,3)
+    // for(train1Counter = 1; train1Counter < 70;train1Counter++){
         
-        Mat imgGray;
+    //     Mat imgGray;
 
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", class2numberList[train2Counter]);
-        string filename = "/home/pedro/stuff/imagens/fundo/dictionary/" + string(fileNumber) + ".jpg";
-        cout << fileNumber << endl;
-        input = imread(filename);
+    //     char* fileNumber = new char[20];
+    //     sprintf(fileNumber, "%d", class1numberList[train1Counter]);
+    //     string filename = "/home/pedro/stuff/imagens/ancora/dictionary/" + string(fileNumber) + ".jpg";
+    //     cout << fileNumber << endl;
+    //     input = imread(filename);
 
-        cvtColor(input,imgGray,CV_BGR2GRAY);
+            
+    //     imgGray = segmentMask(input,100,0);
+        
+    //     // Mat descriptors;
+        
+    //     //string pathOut = "/home/pedro/stuff/imagens/ancora/mask/" + string(fileNumber) + string(".jpg");
+    //     //  
+    //     //vector<int> compression_params;
+    //     //compression_params.push_back(CV_IMWRITE_JPEG_QUALITY);
+    //     //compression_params.push_back(100);
+    //     //imwrite(pathOut,imgGray,compression_params);
 
-        detector->detect(imgGray,keypoints); 
-        if(keypoints.size() > 0){ 
-           // cout << "oi" << endl;
-            bowDE.compute(imgGray, keypoints, bowDescriptors);
+    //     detector->detect(imgGray,keypoints); 
+        
+    //     if(keypoints.size() > 0){
 
-            if(mapTrainingData.count("fundo") == 0){
-                mapTrainingData["fundo"].create(0, bowDescriptors.cols, bowDescriptors.type());
-            }
-            mapTrainingData["fundo"].push_back(bowDescriptors);
-        }
+    //         bowDE.compute(imgGray, keypoints, bowDescriptors);
 
-    }
+    //         if(mapTrainingData.count("ancora") == 0){
+    //             mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
+    //         }
+    //         mapTrainingData["ancora"].push_back(bowDescriptors);
+    //     }
+    //     cout << "done" << endl;
+    //     cout << train1Counter <<endl;
+        
+
+
+    //     // descriptors = descriptorsFromKeypointFile("ancora",class1numberList[train1Counter],"maskKeypoints",bowDE);
+        
+    //     // if(mapTrainingData.count("ancora") == 0){
+    //     //     mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
+    //     // }
+    //     // mapTrainingData["ancora"].push_back(bowDescriptors);
+        
+
+    // }
+
+    // cout << "Fundo Train descriptors" << endl;
+    // for(train2Counter = 1; train2Counter < 50;train2Counter++){
+    // // for(train2Counte"r = 1; train2Counter < TRAIN_RATIO * class2numberList.size();train2Counter++){
+        
+    //     Mat imgGray;
+
+    //     char* fileNumber = new char[20];
+    //     sprintf(fileNumber, "%d", class2numberList[train2Counter]);
+    //     string filename = "/home/pedro/stuff/imagens/fundo/dictionary/" + string(fileNumber) + ".jpg";
+    //     cout << fileNumber << endl;
+    //     input = imread(filename);
+
+    //     cvtColor(input,imgGray,CV_BGR2GRAY);
+
+    //     detector->detect(imgGray,keypoints); 
+    //     if(keypoints.size() > 0){ 
+    //        // cout << "oi" << endl;
+    //         bowDE.compute(imgGray, keypoints, bowDescriptors);
+
+    //         if(mapTrainingData.count("fundo") == 0){
+    //             mapTrainingData["fundo"].create(0, bowDescriptors.cols, bowDescriptors.type());
+    //         }
+    //         mapTrainingData["fundo"].push_back(bowDescriptors);
+    //     }
+
+    // }
 
     //SVM and prediction
     map<string,Ptr<ml::SVM> > oneToAllSVM;
@@ -433,150 +627,100 @@ int main(){
     
     Mat evalResult(0,1,CV_32FC1);
 
-    int ancoraNumber = 19; 
-    for(int testNumber = 1;testNumber < ancoraNumber ;testNumber++){    
 
-        Mat imgGray;
-        Mat imgMask;
-        Mat imgMid;
-        Mat outimg;
-        Mat imgOut;
-      
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", testNumber);
+    /*Testing SVMs*/
+
+    for(obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
         
-        string filename = "/home/pedro/stuff/imagens/ancora/test/NP_" + string(fileNumber) + ".jpg";
-        cout << filename << endl;
-        string maskFilename = "/home/pedro/stuff/imagens/ancora/test_mask/NP_" + string(fileNumber) + ".jpg";
+        int testSize = 11;
 
-        input = imread(filename, CV_LOAD_IMAGE_GRAYSCALE);
-        
-        // cvtColor(input,imgOut,CV_BGR2HSV);
+        //#pragma omp parallel for ordered schedule(dynamic,3)
+        for(int counter = 1; counter <= testSize; counter++){
 
-        // vector<cv::Mat> arrHSV;
-        // split(imgOut,arrHSV);
-        // input = arrHSV[1];
-        // showImage("Saturation",input);  
+            Mat inputIMG, inputMask;
+            Mat grayIMG;
+            vector<KeyPoint> keypointsIMG;
+            Mat bowDescriptorsIMG;
 
-        
-        // cout << "Read input" << endl;
-       // imgMask = imread(maskFilename,CV_LOAD_IMAGE_GRAYSCALE);
-
-        // cout <<  "Read Mask image" << endl;
-        
-        // showImage("Mask",input);
-        
-        input.copyTo(imgMid);
-        // showImage("Detect",imgMid);
-
-
-        int width = imgMid.cols;
-        int height = imgMid.rows;
-        
-        Mat m1 = Mat::zeros(height,width,CV_8UC1);
-        map<string, Mat> outputImage;
-
-        outputImage["ancora"].create(height, width, CV_8UC1);
-        outputImage["ancora"] = Mat::zeros(height,width,CV_8UC1);
-        outputImage["fundo"].create(height, width, CV_8UC1);
-        outputImage["fundo"] = Mat::zeros(height,width,CV_8UC1);
-        
-        int xRoot = 0; int xIter = 0;
-        int yRoot = 0; int yIter = 0;
-        int xCropPixels = width/4;
-        int yCropPixels = height/4;
-
-        for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){
-           
-            for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/8,xIter++){
-             
-                //cout << "xRoot = " << xRoot<< "yRoot = " << yRoot << endl;
-
-                cv::Rect ROI(xRoot,yRoot,xCropPixels,yCropPixels);
-
-                cv::Mat croppedMat(imgMid,ROI);
-
-                //showImage("crop",croppedMat);
-
-                detector->detect(croppedMat,keypoints);
-                cout << "keypoints" << keypoints.size();
-                if(keypoints.size() > 0){
-
-                bowDE.compute(croppedMat, keypoints, bowDescriptors);
-                // cout << "keypoints size" << keypoints.size() << endl;
-                // cout << "Descriptors size" << bowDescriptors.size() << endl;
-                
-                
-
-                    for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
-                        float res = (*it).second->predict(bowDescriptors);
-                        cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
-
-                        if(res)
-                        {for(int i = 0; i < xCropPixels; i++){
-                            for(int j = 0; j <yCropPixels; j++){
-                                outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
-                            }                  
-                        }      
-                        } 
-
-                    }
-                    
-                }
-
-            }
-        }
-        for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
-        showImage((*it).first,outputImage[(*it).first]);
-        outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
-        }
-        
-        
-        // cout << train1Counter << " Keypoints" << endl;
-        // Mat outimg;
-        // drawKeypoints(input,keypoints,outimg,Scalar(0,0,255));
-        // showImage("Keypoints",outimg);
-
-          
-
-
-    }
-        // descriptors = descriptorsFromKeypointFile("ancora",class1numberList[train1Counter],"grayKeypoints",bowDE);
-        // for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it != oneToAllSVM.end();++it){
-        //     float res = (*it).second->predict(bowDescriptors);
-        //     cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
-        // }
-
-    
-    
-
-    for(int i = 0;i < 30;i++){
-
-        Mat imgGray;
-
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", i);
-        
-        string filename = "/home/pedro/stuff/imagens/fundo/test/" + string(fileNumber) + ".jpg";
-
-        input = imread(filename, CV_LOAD_IMAGE_GRAYSCALE);
-        
-        detector->detect(input,keypoints);
-        cout << train1Counter << " Keypoints" << endl;
-        Mat outimg;
-        // drawKeypoints(input,keypoints,outimg,Scalar(0,0,255));
-        // showImage("Keypoints",outimg);
-        if(keypoints.size() > 0){
-
-            bowDE.compute(input, keypoints, bowDescriptors);
-            cout << "keypoints size " << keypoints.size() << endl;
-            cout << "Descriptors size " << bowDescriptors.size() << endl;
+            char* fileNumber = new char[20];
             
-            for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it != oneToAllSVM.end();++it){
-                float res = (*it).second->predict(bowDescriptors);
-                cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
+            sprintf(fileNumber, "%d", counter);
+
+            cout << fileNumber << endl;
+
+            string filenameIMG = pconfig.corePath + "/" + pconfig.filepaths_objs[obj_idx] 
+                        + pconfig.testPath + string(fileNumber) + ".jpg";
+
+            /*Read IMGs*/            
+            inputIMG = imread(filenameIMG);       
+            
+            /*Color conversion in input image*/
+            cvtColor(inputIMG, grayIMG, CV_BGR2GRAY);
+
+            // showImage("Detect",imgMid);
+
+            int width = grayIMG.cols;
+            int height = grayIMG.rows;
+            
+            Mat m1 = Mat::zeros(height,width,CV_8UC1);
+            
+            map<string, Mat> outputImage;
+            for(int objIdx = 0; objIdx < pconfig.number_objects; objIdx++){
+                
+                outputImage[pconfig.filepaths_objs[objIdx]].create(height, width, CV_8UC1);
+                outputImage[pconfig.filepaths_objs[objIdx]] = Mat::zeros(height,width,CV_8UC1);
+
             }
-        }  
+           
+            int xRoot = 0; int xIter = 0;
+            int yRoot = 0; int yIter = 0;
+            int xCropPixels = width/4;
+            int yCropPixels = height/4;
+
+            //#pragma omp parallel for ordered schedule(dynamic,3)
+            for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){          
+                for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/8,xIter++){
+                
+                    vector<KeyPoint> keypointsTest;
+                    //cout << "xRoot = " << xRoot<< "yRoot = " << yRoot << endl;
+                    cv::Rect ROI(xRoot,yRoot,xCropPixels,yCropPixels);
+                    cv::Mat croppedMat(grayIMG,ROI);
+                    //showImage("crop",croppedMat);
+
+                    detector->detect(croppedMat,keypointsTest);
+                    
+                    //cout << "keypoints" << keypointsTest.size();
+                    if(keypointsTest.size() > 0){
+                        bowDE.compute(croppedMat, keypointsTest, bowDescriptors);
+                        // cout << "keypoints size" << keypoints.size() << endl;
+                        // cout << "Descriptors size" << bowDescriptors.size() << endl;
+
+                        for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
+                            float res = (*it).second->predict(bowDescriptors);
+                           // cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
+
+                            if(res){
+                                for(int i = 0; i < xCropPixels; i++){
+                                    for(int j = 0; j <yCropPixels; j++){
+                                        outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
+                                    }                  
+                                }  
+                            } 
+                        }   
+                    }
+                }
+            }
+            for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
+            showImage((*it).first,outputImage[(*it).first]);
+            outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
+            }
+            //showImage("masked",inputIMG);
+        }        
+
+
+        cout << pconfig.filepaths_objs[obj_idx] << " done \n";
+        
+
     }
 #endif
 

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<corePath>/home/pedro/stuff/imagens</corePath>
+<maskPath>/mask/</maskPath>
+<testPath>/test/</testPath>
+<dictionaryPath>/dictionary/</dictionaryPath>
+<nameFiles>/</nameFiles>
+<number_objects>2</number_objects>
+<number_samplesPerTrialObject>70</number_samplesPerTrialObject>
+<filepaths_objs>
+  fundo ancora</filepaths_objs>
+<number_TrialsPerObject>4</number_TrialsPerObject>
+</opencv_storage>
