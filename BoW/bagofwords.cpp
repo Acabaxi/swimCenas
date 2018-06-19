@@ -422,7 +422,7 @@ int main(){
             listSize = 50;
         }
         else
-            listSize = pconfig.number_samplesPerTrialObject;
+            listSize = pconfig.number_samplesPerTrialObject * TRAIN_RATIO;
 
         #pragma omp parallel for ordered schedule(dynamic,3)
         for(int counter = 0; counter < listSize; counter++){
@@ -484,82 +484,6 @@ int main(){
     
 
 
-    // int listSize = class1numberList.size() * TRAIN_RATIO;
-    // // #pragma omp parallel for ordered schedule(dynamic,3)
-    // for(train1Counter = 1; train1Counter < 70;train1Counter++){
-        
-    //     Mat imgGray;
-
-    //     char* fileNumber = new char[20];
-    //     sprintf(fileNumber, "%d", class1numberList[train1Counter]);
-    //     string filename = "/home/pedro/stuff/imagens/ancora/dictionary/" + string(fileNumber) + ".jpg";
-    //     cout << fileNumber << endl;
-    //     input = imread(filename);
-
-            
-    //     imgGray = segmentMask(input,100,0);
-        
-    //     // Mat descriptors;
-        
-    //     //string pathOut = "/home/pedro/stuff/imagens/ancora/mask/" + string(fileNumber) + string(".jpg");
-    //     //  
-    //     //vector<int> compression_params;
-    //     //compression_params.push_back(CV_IMWRITE_JPEG_QUALITY);
-    //     //compression_params.push_back(100);
-    //     //imwrite(pathOut,imgGray,compression_params);
-
-    //     detector->detect(imgGray,keypoints); 
-        
-    //     if(keypoints.size() > 0){
-
-    //         bowDE.compute(imgGray, keypoints, bowDescriptors);
-
-    //         if(mapTrainingData.count("ancora") == 0){
-    //             mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
-    //         }
-    //         mapTrainingData["ancora"].push_back(bowDescriptors);
-    //     }
-    //     cout << "done" << endl;
-    //     cout << train1Counter <<endl;
-        
-
-
-    //     // descriptors = descriptorsFromKeypointFile("ancora",class1numberList[train1Counter],"maskKeypoints",bowDE);
-        
-    //     // if(mapTrainingData.count("ancora") == 0){
-    //     //     mapTrainingData["ancora"].create(0, bowDescriptors.cols, bowDescriptors.type());
-    //     // }
-    //     // mapTrainingData["ancora"].push_back(bowDescriptors);
-        
-
-    // }
-
-    // cout << "Fundo Train descriptors" << endl;
-    // for(train2Counter = 1; train2Counter < 50;train2Counter++){
-    // // for(train2Counte"r = 1; train2Counter < TRAIN_RATIO * class2numberList.size();train2Counter++){
-        
-    //     Mat imgGray;
-
-    //     char* fileNumber = new char[20];
-    //     sprintf(fileNumber, "%d", class2numberList[train2Counter]);
-    //     string filename = "/home/pedro/stuff/imagens/fundo/dictionary/" + string(fileNumber) + ".jpg";
-    //     cout << fileNumber << endl;
-    //     input = imread(filename);
-
-    //     cvtColor(input,imgGray,CV_BGR2GRAY);
-
-    //     detector->detect(imgGray,keypoints); 
-    //     if(keypoints.size() > 0){ 
-    //        // cout << "oi" << endl;
-    //         bowDE.compute(imgGray, keypoints, bowDescriptors);
-
-    //         if(mapTrainingData.count("fundo") == 0){
-    //             mapTrainingData["fundo"].create(0, bowDescriptors.cols, bowDescriptors.type());
-    //         }
-    //         mapTrainingData["fundo"].push_back(bowDescriptors);
-    //     }
-
-    // }
 
     //SVM and prediction
     map<string,Ptr<ml::SVM> > oneToAllSVM;
@@ -631,7 +555,10 @@ int main(){
     /*Testing SVMs*/
 
     for(obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
-        
+        if(pconfig.filepaths_objs[obj_idx].compare("fundo") == 0 ){
+            continue;
+        }
+
         int testSize = 11;
 
         //#pragma omp parallel for ordered schedule(dynamic,3)
