@@ -6,11 +6,12 @@
 #include "opencv2/opencv_modules.hpp"
 #include <ctime>
 #include <cstdlib>
+#include <iomanip>
 
 using namespace std;
 using namespace cv;
 
-#define TRAIN_RATIO 0.7
+#define TRAIN_RATIO 0.9     
 #define DICTIONARY_BUILD 0
 
 #define NAMEFILE_CONFIG_PARAM "param_config.xml"
@@ -18,7 +19,78 @@ using namespace cv;
 Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d);
 Mat segmentMask(Mat imgsrc, int value, int isDebug);
 Mat descriptorsFromKeypointFile(string className, int imageNumber, string keypointType, BOWImgDescriptorExtractor bowDE);
+vector <double> evaluatePredictionSingle(Mat detection, Mat groundTruth);
+void printPredictions(vector<double> stats);
 
+vector<double> evaluatePredictionSingle(Mat detection, Mat groundTruth){
+    
+    vector <double> stats;
+
+    int truePositivePx = 0, falsePositivePx = 0;
+    int trueNegativePx = 0, falseNegativePx = 0;
+    
+    int numPixelsPositive = 0;
+    int numPixelsNegative = 0;
+
+    /*Check dimensions*/
+    if(groundTruth.cols != detection.cols){
+        throw "Different number of COLUMNS";
+    }
+    if(groundTruth.rows != detection.rows){
+        throw "Different number of ROWS";
+    }
+
+    /*Determine negative and positive pixels*/
+    for(int i = 0; i < groundTruth.cols * groundTruth.rows; i++){
+        
+        if(groundTruth.data[i] > 0){
+            numPixelsPositive++;
+            
+            if(detection.data[i] > 0)
+                truePositivePx++;
+            else if(detection.data[i] == 0)
+                falseNegativePx++;
+        }
+        else if(groundTruth.data[i] == 0){
+            numPixelsNegative++; 
+
+            if(detection.data[i] > 0)
+                falsePositivePx++;
+            else if(detection.data[i] == 0)
+                trueNegativePx++;
+        }
+
+    }
+
+    
+    /*Calculate stuff*/
+    double truePositiveR = (double)truePositivePx / (double)(truePositivePx + falseNegativePx);
+    double trueNegativeR = (double)trueNegativePx / (double)(trueNegativePx + falsePositivePx);
+    double falsePositiveR = (double)falsePositivePx / (double)(falsePositivePx + trueNegativePx);
+    double falseNegativeR = (double)falseNegativePx / (double)(truePositivePx + falseNegativePx);
+
+    double accuracy = (double)(truePositivePx + trueNegativePx) / (double)(truePositivePx + trueNegativePx + falsePositivePx + falseNegativePx);
+
+    
+    stats.push_back(accuracy);
+    stats.push_back(truePositiveR);
+    stats.push_back(trueNegativeR);
+    stats.push_back(falsePositiveR);
+    stats.push_back(falseNegativeR);
+
+    printPredictions(stats);
+    return stats;
+}
+
+void printPredictions(vector<double> stats){
+
+    cout.setf(ios::fixed);
+
+    cout << "Accuracy " << std::setprecision(3) << stats[0] * 100<< endl;
+    cout << "TPR " << stats[1] * 100 << endl;
+    cout << "TNR " << stats[2] * 100 << endl;
+
+}
 
 Mat descriptorsFromKeypointFile(string className, int imageNumber, string keypointType, BOWImgDescriptorExtractor bowDE){
 
@@ -427,7 +499,7 @@ int main(){
         #pragma omp parallel for ordered schedule(dynamic,3)
         for(int counter = 0; counter < listSize; counter++){
 
-            
+            KeyPointsFilter kpFilter;
 
             Mat inputIMG, inputMask;
             Mat grayIMG;
@@ -459,6 +531,10 @@ int main(){
             //showImage("asd", maskedGray);
             
             detector->detect(maskedGray,keypointsIMG); 
+
+            /*filter keypoints*/
+            kpFilter.retainBest(keypointsIMG, 1000);
+            //cout << "keypoint number " << keypointsIMG.size() << endl;
 
             if(keypointsIMG.size() > 0){
 
@@ -559,7 +635,7 @@ int main(){
             continue;
         }
 
-        int testSize = 11;
+        int testSize = 1;
 
         //#pragma omp parallel for ordered schedule(dynamic,3)
         for(int counter = 1; counter <= testSize; counter++){
@@ -637,9 +713,18 @@ int main(){
                     }
                 }
             }
+
+            string truthPath = pconfig.corePath + "/" + pconfig.filepaths_objs[obj_idx] 
+                        + "/truth/" + string(fileNumber) + ".jpg";
+
+
+            Mat truthIMG = imread(truthPath);
+
+            evaluatePredictionSingle(outputImage[pconfig.filepaths_objs[obj_idx]],truthIMG);
+
             for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
-            showImage((*it).first,outputImage[(*it).first]);
-            outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
+                showImage((*it).first,outputImage[(*it).first]);
+                outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
             }
             //showImage("masked",inputIMG);
         }        
