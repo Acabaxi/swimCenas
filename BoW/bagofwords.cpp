@@ -407,9 +407,7 @@ int main(){
 
     //#pragma omp parallel for ordered schedule(dynamic,3)
     for(obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
-        
-        
-        
+         
         /*Escolher imagens aleatórias para treino*/
 
         vector<int> numberList;
@@ -464,7 +462,7 @@ int main(){
             detector->detect(maskedGray,keypointsIMG); 
 
             /*filter keypoints*/
-            kpFilter.retainBest(keypointsIMG, 1000);
+            //kpFilter.retainBest(keypointsIMG, 1000);
             //cout << "keypoint number " << keypointsIMG.size() << endl;
 
             if(keypointsIMG.size() > 0){
@@ -477,79 +475,56 @@ int main(){
                 mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(bowDescriptorsIMG);
 
             }
-
-
-
             //showImage("masked",inputIMG);
         }        
-
-
         cout << pconfig.filepaths_objs[obj_idx] << " done \n";
-        
-
     }
     
-
-
-
-    //SVM and prediction
-    map<string,Ptr<ml::SVM> > oneToAllSVM;
-
+    /*knn*/
+    /*Declaration*/
+    Ptr<ml::KNearest> kNearestNeighbors(ml::KNearest::create() ); 
     
-    // Build one-to-All classifier for each of the training data classes
-    float RBF_C[] = { 1.4,1.43,1.46,1.49,10,15,20,25,100,150,200,250};
-    float RBF_gamma[] = { 0.01, 0.1, 1};
+    /*Parameters*/
     
-    float CVal = 1.42;
-    float GammaVal = 1;
+    
+    /*Training Data Setup*/
 
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        //cout << "C: " << RBF_C[cenas] << "  Gamma: "<< RBF_gamma[gamma] << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
-        cout << "_-------------------------------------" << endl;
+    int classNumber = 0;
+    Mat samples(0,0,CV_32FC1);
+    Mat labels(0,1,CV_32S);
 
-        for( map<string, Mat>::iterator it = mapTrainingData.begin(); it != mapTrainingData.end(); ++it){
+    for(map<string, Mat>::iterator it = mapTrainingData.begin(); it != mapTrainingData.end(); ++it,classNumber++){
 
         string class_name = (*it).first;
         cout << class_name << " Classifier" << endl;
-        Mat samples(0,bowDescriptors.cols,CV_32FC1);
-        Mat labels(0,1,CV_32S);
+        
 
         samples.push_back(mapTrainingData[class_name]);
+        cout << "Samples size " << samples.size() << endl;
         Mat class_label = Mat::ones(mapTrainingData[class_name].rows, 1, CV_32S);
+        class_label = class_label * classNumber;
+
         labels.push_back(class_label);
 
-        for (map<string, Mat>::iterator it1 = mapTrainingData.begin(); it1 != mapTrainingData .end(); ++it1) {
-            string not_class_ = (*it1).first;
-            if(not_class_[0] == class_name[0]) continue;
-            samples.push_back(mapTrainingData[not_class_]);
-            class_label = Mat::zeros(mapTrainingData[not_class_].rows, 1, CV_32S);
-            labels.push_back(class_label);
-        }
 
-        Mat samples_32f;
-        samples.convertTo(samples_32f, CV_32FC1);
-
-        oneToAllSVM[class_name] = ml::SVM::create();
-        oneToAllSVM[class_name]->setKernel(ml::SVM::RBF);
-        oneToAllSVM[class_name]->setType(ml::SVM::C_SVC);
-        oneToAllSVM[class_name]->setC(CVal);
-        oneToAllSVM[class_name]->setGamma(GammaVal);
-
-        Ptr<ml::TrainData> dataclassTrain = ml::TrainData::create(samples_32f, ml::ROW_SAMPLE, labels);
+        //oneToAllSVM[class_name] = ml::SVM::create();
+        //oneToAllSVM[class_name]->setKernel(ml::SVM::RBF);
+        //oneToAllSVM[class_name]->setType(ml::SVM::C_SVC);
+        //oneToAllSVM[class_name]->setC(CVal);
+        //oneToAllSVM[class_name]->setGamma(GammaVal);
+        //Ptr<ml::TrainData> dataclassTrain = ml::TrainData::create(samples_32f, ml::ROW_SAMPLE, labels);
         
-        oneToAllSVM[class_name]->train(dataclassTrain);
-
+        //oneToAllSVM[class_name]->train(dataclassTrain);
     }
+    //cout << " Labels " << samples << endl;
+
+    Mat samples_32f;
+    samples.convertTo(samples_32f, CV_32FC1);
+
+    Ptr<ml::TrainData> dataclassTrain = ml::TrainData::create(samples_32f, ml::ROW_SAMPLE, labels);
+    kNearestNeighbors->train(dataclassTrain);
+    //kNearestNeighbors->setAlgorithmType(ml::KNearest::KDTREE);
+    kNearestNeighbors->setIsClassifier(true);
 
     cout << "Testing SVMs" << endl;
     Mat groundTruth(0, 1, CV_32FC1);
@@ -562,11 +537,11 @@ int main(){
     /*Testing SVMs*/
 
     for(obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
-        if(pconfig.filepaths_objs[obj_idx].compare("fundo") == 0 ){
-            continue;
-        }
+        //if(pconfig.filepaths_objs[obj_idx].compare("fundo") == 0 ){
+        //    continue;
+        //}
 
-        int testSize = 1;
+        int testSize = 11;
 
         //#pragma omp parallel for ordered schedule(dynamic,3)
         for(int counter = 1; counter <= testSize; counter++){
@@ -628,35 +603,40 @@ int main(){
                         bowDE.compute(croppedMat, keypointsTest, bowDescriptors);
                         // cout << "keypoints size" << keypoints.size() << endl;
                         // cout << "Descriptors size" << bowDescriptors.size() << endl;
-
-                        for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
-                            float res = (*it).second->predict(bowDescriptors);
-                           // cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
-
-                            if(res){
-                                for(int i = 0; i < xCropPixels; i++){
-                                    for(int j = 0; j <yCropPixels; j++){
-                                        outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
-                                    }                  
-                                }  
-                            } 
-                        }   
+                        for(int k = 10; k < 50; k++){
+                            Mat neighbors;
+                            float res = kNearestNeighbors->findNearest(bowDescriptors,k,noArray(),neighbors);
+                            cout << k << " nearest Neighbors " << res << " Neighbors " << neighbors << endl;
+                        }
+                        waitKey(32);
+                        //for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
+                        //    float res = (*it).second->predict(bowDescriptors);
+                        //   // cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
+//
+                        //    if(res){
+                        //        for(int i = 0; i < xCropPixels; i++){
+                        //            for(int j = 0; j <yCropPixels; j++){
+                        //                outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
+                        //            }                  
+                        //        }  
+                        //    } 
+                        //}   
                     }
                 }
             }
 
-            string truthPath = pconfig.corePath + "/" + pconfig.filepaths_objs[obj_idx] 
-                        + "/truth/" + string(fileNumber) + ".jpg";
+            //string truthPath = pconfig.corePath + "/" + pconfig.filepaths_objs[obj_idx] 
+            //            + "/truth/" + string(fileNumber) + ".jpg";
+//
+//
+            //Mat truthIMG = imread(truthPath);
+            //
+            //evaluatePredictionSingle(outputImage[pconfig.filepaths_objs[obj_idx]],truthIMG);
 
-
-            Mat truthIMG = imread(truthPath);
-            
-            evaluatePredictionSingle(outputImage[pconfig.filepaths_objs[obj_idx]],truthIMG);
-
-            for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
-                showImage((*it).first,outputImage[(*it).first]);
-                outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
-            }
+            //for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
+            //    showImage((*it).first,outputImage[(*it).first]);
+            //    outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
+            //}
             //showImage("masked",inputIMG);
         }        
 
