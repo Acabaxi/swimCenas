@@ -382,8 +382,8 @@ int main(){
     
     Mat dictionary;
     
-    FileStorage fs("dictionaryLowRes_100.yml", cv::FileStorage::READ);
-    //FileStorage fs("dictionary2Class_1000.yml", cv::FileStorage::READ);
+    //FileStorage fs("dictionaryLowRes_100.yml", cv::FileStorage::READ);
+    FileStorage fs("dictionary2Class_100.yml", cv::FileStorage::READ);
     
     
     if(fs.isOpened())
@@ -470,7 +470,10 @@ int main(){
                 if(mapTrainingData.count(pconfig.filepaths_objs[obj_idx]) == 0){
                     mapTrainingData[pconfig.filepaths_objs[obj_idx]].create(0, bowDescriptorsIMG.cols, bowDescriptorsIMG.type());
                 }
-                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(bowDescriptorsIMG);
+                
+                Mat normalizedHist;
+                normalize(bowDescriptorsIMG,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
+                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(normalizedHist);
 
             }
             //showImage("masked",inputIMG);
@@ -484,12 +487,12 @@ int main(){
     
     /*Parameters*/
     
-    vector<int> layers = {dictionary.rows, 1500, 300, 2};
+    vector<int> layers = {dictionary.rows, 1500, pconfig.number_objects};
     
     neuralNet->setLayerSizes(layers);
     neuralNet->setTrainMethod(ml::ANN_MLP::RPROP,0.0001);
     neuralNet->setActivationFunction(ml::ANN_MLP::SIGMOID_SYM,1,1);
-    neuralNet->setBackpropMomentumScale(0.6);
+    neuralNet->setBackpropMomentumScale(0.1);
     neuralNet->setBackpropWeightScale(0.1);
     
 
@@ -535,6 +538,7 @@ int main(){
     samples.convertTo(samples_32f, CV_32FC1);
 
     Ptr<ml::TrainData> dataclassTrain = ml::TrainData::create(samples_32f, ml::ROW_SAMPLE, labels);
+    
     neuralNet->train(dataclassTrain);
     //kNearestNeighbors->setAlgorithmType(ml::KNearest::KDTREE);
     //neuralNet->setIsClassifier(true);
@@ -617,14 +621,23 @@ int main(){
                         // cout << "keypoints size" << keypoints.size() << endl;
                         // cout << "Descriptors size" << bowDescriptors.size() << endl;
                         
+                        /*Descriptor histogram normalization
+                        Ok, now results aren't completely biased to one class,
+                        but it's still outputting garbage*/
+
+                        Mat normalizedHist;
+                        normalize(bowDescriptors,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
+                
+
                         Mat neighbors;
-                        float res = neuralNet->predict(bowDescriptors);
+                        float res = neuralNet->predict(normalizedHist);
                         cout <<"Neural pred " << res << endl;
                         
                          // cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
                         
                         for(int i = 0; i < xCropPixels; i++){
                             for(int j = 0; j <yCropPixels; j++){
+                                
                                 outputImage[pconfig.filepaths_objs[(int)res]].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
                             }                  
                         }  
