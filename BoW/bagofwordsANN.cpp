@@ -423,7 +423,7 @@ int main(){
         else
             listSize = pconfig.number_samplesPerTrialObject * TRAIN_RATIO;
 
-        #pragma omp parallel for ordered schedule(dynamic,3)
+        #pragma omp parallel for ordered schedule(dynamic,2)
         for(int counter = 0; counter < listSize; counter++){
 
             KeyPointsFilter kpFilter;

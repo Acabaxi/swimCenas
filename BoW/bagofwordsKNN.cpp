@@ -378,17 +378,7 @@ int main(){
 
 #else
 
-    int dicSize[] = {10, 100, 300, 500, 700};
-
-    for(int dicTrav = 0; dicTrav < 5;dicTrav++){
-        
-    int dictionarySize = dicSize[dicTrav];
-
-    cout << "Dictionary size " << dictionarySize << endl;
-
-    char* dicNumber = new char[20];
-    sprintf(dicNumber, "%d", dictionarySize);
-    string dictionaryFile = "dictionary2Class_" + string(dicNumber) + ".yml";
+    string dictionaryFile = "dictionary2Class_10.yml";
     cout << dictionaryFile << endl;
     Mat dictionary;
 
@@ -433,7 +423,7 @@ int main(){
         else
             listSize = pconfig.number_samplesPerTrialObject * TRAIN_RATIO;
 
-        #pragma omp parallel for ordered schedule(dynamic,3)
+        //#pragma omp parallel for ordered schedule(dynamic,2)
         for(int counter = 0; counter < listSize; counter++){
 
             KeyPointsFilter kpFilter;
@@ -480,7 +470,11 @@ int main(){
                 if(mapTrainingData.count(pconfig.filepaths_objs[obj_idx]) == 0){
                     mapTrainingData[pconfig.filepaths_objs[obj_idx]].create(0, bowDescriptorsIMG.cols, bowDescriptorsIMG.type());
                 }
-                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(bowDescriptorsIMG);
+
+                Mat normalizedHist;
+                normalize(bowDescriptorsIMG,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
+                                
+                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(normalizedHist);
 
             }
             //showImage("masked",inputIMG);
@@ -611,6 +605,10 @@ int main(){
                         bowDE.compute(croppedMat, keypointsTest, bowDescriptors);
                         // cout << "keypoints size" << keypoints.size() << endl;
                         // cout << "Descriptors size" << bowDescriptors.size() << endl;
+
+                        Mat normalizedHist;
+                        normalize(bowDescriptors,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
+                
                         for(int k = 100; k < 101; k++){
                             Mat neighbors;
                             float res = kNearestNeighbors->findNearest(bowDescriptors,k,noArray(),neighbors);
@@ -654,7 +652,7 @@ int main(){
 
     }
 
-    }
+    
 #endif
 
     return 1;

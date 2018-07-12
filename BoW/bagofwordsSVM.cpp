@@ -199,6 +199,7 @@ void print_config(config_parameters pconfig)
 int main(){
 
     config_parameters pconfig;
+    
     load_config(pconfig,NAMEFILE_CONFIG_PARAM);
     // save_config();
 
@@ -384,8 +385,8 @@ int main(){
 
     Mat dictionary;
 
-    //FileStorage fs("dictionaryLowRes_100.yml", cv::FileStorage::READ);
-    FileStorage fs("dictionary2Class_1000.yml", cv::FileStorage::READ);
+    FileStorage fs("dictionaryLowRes_100.yml", cv::FileStorage::READ);
+    //FileStorage fs("dictionary2Class_1000.yml", cv::FileStorage::READ);
     if(fs.isOpened())
     {
         cout<<"Loading dictionary" <<endl;
@@ -461,18 +462,18 @@ int main(){
             /*Apply Mask*/
             Mat maskedGray;
             grayIMG.copyTo(maskedGray, inputMask);
-
+            
             //showImage("asd", maskedGray);
             
             detector->detect(maskedGray,keypointsIMG); 
-
+            
             /*filter keypoints*/
             //kpFilter.retainBest(keypointsIMG, 1000);
             //cout << "keypoint number " << keypointsIMG.size() << endl;
 
             if(keypointsIMG.size() > 0){
-
-                bowDE.compute(maskedGray, keypointsIMG, bowDescriptorsIMG);
+           
+                bowDE.compute(maskedGray, keypointsIMG, bowDescriptorsIMG);           
 
                 if(mapTrainingData.count(pconfig.filepaths_objs[obj_idx]) == 0){
                     mapTrainingData[pconfig.filepaths_objs[obj_idx]].create(0, bowDescriptorsIMG.cols, bowDescriptorsIMG.type());
