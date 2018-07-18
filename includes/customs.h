@@ -1,11 +1,44 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
+#include <iostream>
+#include <iomanip>
+#include <math.h>
 
 using namespace cv;
 using namespace std;
 
 void showImage(String windowName,Mat img);
 Mat saturationSegment(Mat img, int value);
+Mat SIFT2Root(Mat SIFTDesc);
+
+
+Mat SIFT2Root(Mat SIFTDesc){
+
+    Mat RootSIFTDesc(SIFTDesc.rows,SIFTDesc.cols,CV_32F);
+    
+    for(int yIdx = 0; yIdx < SIFTDesc.rows; yIdx++){
+        float elementSum = 0;
+        //RootSIFTDesc.create(SIFTDesc.size(),SIFTDesc.type());
+        //cout << RootSIFTDesc.size()  << endl;
+        for(int idx = 0; idx < SIFTDesc.size().width; idx++){
+            //cout << idx << "     " << (float)SIFTDesc.at<float>(0,idx)<< endl;
+            elementSum += (float)SIFTDesc.at<float>(yIdx,idx);
+        }
+        //cout << (float)elementSum << endl;
+        //SIFTDesc.copyTo(RootSIFTDesc);
+
+        for(int idx = 0; idx < SIFTDesc.size().width; idx++){
+            
+            RootSIFTDesc.at<float>(yIdx,idx) = (float)sqrt((float)SIFTDesc.at<float>(yIdx,idx) / (float)elementSum);
+        }
+        //cout << RootSIFTDesc << endl;
+        
+
+    }
+    
+    return RootSIFTDesc;
+}
+
 
 void showImage(String windowName,Mat img){
 
