@@ -13,7 +13,7 @@ using namespace std;
 using namespace cv;
 
 #define TRAIN_RATIO 0.9     
-#define DICTIONARY_BUILD 0
+#define DICTIONARY_BUILD 1
 
 #define NAMEFILE_CONFIG_PARAM "param_config.xml"
 
@@ -90,10 +90,11 @@ Mat extractDescriptors(Mat imgsrc,Ptr<Feature2D> f2d){
     Mat descriptors;
 
     f2d->detect(imgsrc, keypoints);
-
+    cout << "keypoints " << keypoints.size() << endl;
     if(keypoints.size() > 0 ){
         Mat imgDrawn;   
         f2d->compute(imgsrc,keypoints,descriptors);
+        cout << descriptors.size() << endl;
         // drawKeypoints(imgsrc,keypoints,imgDrawn,Scalar(0,0,255));
         // showImage("Keypoints",imgDrawn);
     }
@@ -245,67 +246,7 @@ int main(){
 
 #if DICTIONARY_BUILD == 2 //Keypoints
 
-    vector<vector<KeyPoint> > grayKeypoints;
-    vector<vector<KeyPoint> > maskKeypoints;
-
-    vector<KeyPoint> keypointsMask;
-    vector<KeyPoint> keypointsGray;
-
-    Mat imgGray;
-    Mat imgMask;
-    
-    // #pragma omp parallel for ordered schedule(dynamic,3)
-    for(int i = 1; i < 304; i++){
-        cout << "Detecting image: " << i << endl;
-        
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", i);
-        string filename = "/home/pedro/stuff/imagens/ancora/" + string(fileNumber) + ".jpg";
-
-        input = imread(filename);
-        // showImage("input",input);
-
-        imgMask = segmentMask(input,100,0);
-
-        cvtColor(input,imgGray,CV_BGR2GRAY);
-
-        detector->detect(imgGray, keypointsGray);
-        detector->detect(imgMask, keypointsMask); 
-        
-        // #pragma omp ordered
-        // {
-        grayKeypoints.push_back(keypointsGray);
-        maskKeypoints.push_back(keypointsMask);
-        // }
-
-        string outfile1 = "./ymls/maskKeypoints" + string(fileNumber) + ".yml";
-        string outfile2 = "./ymls/grayKeypoints" + string(fileNumber) + ".yml";
-
-        FileStorage fs2(outfile1, FileStorage::WRITE);
-        FileStorage fs(outfile2, FileStorage::WRITE);
-
-        if(fs.isOpened()){
-            fs << "grayKeypoints" << keypointsGray;
-            fs.release();
-        }
-        if(fs2.isOpened()){
-            fs2 << "maskKeypoints" << keypointsMask;
-            fs.release();
-        }
-    }
-
-
-    // FileStorage fs("./ymls/grayKeypoints.yml", FileStorage::WRITE);
-    // FileStorage fs2("./ymls/maskKeypoints.yml", FileStorage::WRITE);
-
-    // if(fs.isOpened()){
-    //     fs << "grayKeypoints" << grayKeypoints;
-    //     fs.release();
-    // }
-    // if(fs2.isOpened()){
-    //     fs2 << "maskKeypoints" << maskKeypoints;
-    //     fs.release();
-    // }
+    cout << "ello"<< endl;
 
 #elif DICTIONARY_BUILD == 1
 
@@ -313,7 +254,7 @@ int main(){
     for(int obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
         cout << "Dictionary " << pconfig.filepaths_objs[obj_idx] << endl;
         
-        for(int i = 1; i < 99; i++){
+        for(int i = 1; i < 100; i++){
             
             Mat inputIMG;
             Mat inputMask;
@@ -343,8 +284,12 @@ int main(){
         
             //Feature extraction
             Mat dicDescriptors;
+            Mat rootDescriptors;
             dicDescriptors = extractDescriptors(maskedGray,f2d);
-            featuresUnclustered.push_back(dicDescriptors);
+
+            rootDescriptors = SIFT2Root(dicDescriptors);
+            featuresUnclustered.push_back(rootDescriptors);
+            cout << featuresUnclustered.size() << endl;
         }
     
     }
@@ -352,23 +297,22 @@ int main(){
 
 
     //BOWKMeansTrainer
-    int dicSize[] = {1000, 10, 100, 300, 500, 700};
-    for(int dicTrav = 0; dicTrav < 1; dicTrav++){
+    int dicSize[] = {700,1000};
+    for(int dicTrav = 0; dicTrav < 6; dicTrav++){
         int dictionarySize = dicSize[dicTrav];
 
         TermCriteria tc(CV_TERMCRIT_ITER, 100, 0.001);
         int retries = 2;
         int flags   = cv::KMEANS_PP_CENTERS;
 
-        cout << "Clustering features" << dictionarySize << endl;
+        cout << "Clustering features " << dictionarySize << endl;
         BOWKMeansTrainer bowTrainer(dictionarySize,tc,retries,flags);
 
         Mat dictionary = bowTrainer.cluster(featuresUnclustered); 
 
-
         char* dicNumber = new char[20];
         sprintf(dicNumber, "%d", dictionarySize);
-        string dictionaryFile = "dictionary2Class_" + string(dicNumber) + ".yml";
+        string dictionaryFile = "dictionaryRootSIFT_" + string(dicNumber) + ".yml";
         
         FileStorage fs(dictionaryFile, FileStorage::WRITE);
         if(fs.isOpened()){

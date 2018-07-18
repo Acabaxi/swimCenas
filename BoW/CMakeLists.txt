@@ -19,3 +19,6 @@ target_link_libraries( KNN ${OpenCV_LIBS})
 add_executable( ANN bagofwordsANN.cpp)
 target_link_libraries( ANN ${OpenCV_LIBS})
 
+add_executable( sal saliencyTest.cpp)
+target_link_libraries( sal ${OpenCV_LIBS})
+

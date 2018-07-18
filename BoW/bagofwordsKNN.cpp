@@ -307,78 +307,10 @@ int main(){
     // }
 
 #elif DICTIONARY_BUILD == 1
-    cout << "Dictionary ancoras" << endl;
-    for(vector<int>::iterator it=class1numberList.begin(); it!=class1numberList.end();++it){
-        
-        cout << ++asd << endl;
-        if(asd == dictionarySamples)
-            break;
-
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", *it);
-        string filename = "/home/pedro/stuff/imagens/ancora/dictionary/" + string(fileNumber) + ".jpg";
-
-        input = imread(filename);
-        // showImage("input",input);
-
-        imgMasked = segmentMask(input,100,0);
-      
-        //Feature extraction
-        
-        descriptors = extractDescriptors(imgMasked,f2d);
-        featuresUnclustered.push_back(descriptors);
-    }
-
-
-    cout << "Dictionary fundo" << endl;
-    asd = 0;
-    for(vector<int>::iterator it=class2numberList.begin(); it!=class2numberList.end();++it){
-        
-       
-        cout << ++asd << endl;
-        if(asd == dictionarySamples)
-            break;
-        char* fileNumber = new char[20];
-        sprintf(fileNumber, "%d", *it);
-        string filename = "/home/pedro/stuff/imagens/fundo/dictionary/" + string(fileNumber) + ".jpg";
-        cout << filename << endl;
-        input = imread(filename);
-        // showImage("input",input);
-
-        cvtColor(input,imgMasked,CV_BGR2GRAY);
-
-        //Feature extraction
-        
-        descriptors = extractDescriptors(imgMasked,f2d);
-        featuresUnclustered.push_back(descriptors);
-    }
-
-
-    //BOWKMeansTrainer
-    int dictionarySize = 1000;
-    TermCriteria tc(CV_TERMCRIT_ITER, 100, 0.001);
-    int retries = 2;
-    int flags   = cv::KMEANS_PP_CENTERS;
-
-    cout << "Clustering features" << endl;
-    BOWKMeansTrainer bowTrainer(dictionarySize,tc,retries,flags);
-    Mat dictionary = bowTrainer.cluster(featuresUnclustered); 
-
-
-    char* dicNumber = new char[20];
-    sprintf(dicNumber, "%d", dictionarySamples);
-    string dictionaryFile = "dictionaryLowRes_" + string(dicNumber) + ".yml";
-    
-    FileStorage fs(dictionaryFile, FileStorage::WRITE);
-    if(fs.isOpened()){
-        fs << "vocabulary" << dictionary;
-        fs.release();
-    }
-    
-
+    cout << "elo" << endl;
 #else
 
-    string dictionaryFile = "dictionary2Class_10.yml";
+    string dictionaryFile = "dictionaryRootSIFT_1000.yml";
     cout << dictionaryFile << endl;
     Mat dictionary;
 
@@ -466,15 +398,17 @@ int main(){
             if(keypointsIMG.size() > 0){
 
                 bowDE.compute(maskedGray, keypointsIMG, bowDescriptorsIMG);
+                Mat rootDesc;
+                rootDesc = SIFT2Root(bowDescriptorsIMG);
 
                 if(mapTrainingData.count(pconfig.filepaths_objs[obj_idx]) == 0){
-                    mapTrainingData[pconfig.filepaths_objs[obj_idx]].create(0, bowDescriptorsIMG.cols, bowDescriptorsIMG.type());
+                    mapTrainingData[pconfig.filepaths_objs[obj_idx]].create(0, rootDesc.cols, rootDesc.type());
                 }
 
-                Mat normalizedHist;
-                normalize(bowDescriptorsIMG,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
+                //Mat normalizedHist;
+                //normalize(bowDescriptorsIMG,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
                                 
-                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(normalizedHist);
+                mapTrainingData[pconfig.filepaths_objs[obj_idx]].push_back(rootDesc);
 
             }
             //showImage("masked",inputIMG);
@@ -539,11 +473,11 @@ int main(){
     /*Testing SVMs*/
 
     for(obj_idx = 0; obj_idx < pconfig.number_objects; obj_idx++){
-        //if(pconfig.filepaths_objs[obj_idx].compare("fundo") == 0 ){
-        //    continue;
-        //}
+        if(pconfig.filepaths_objs[obj_idx].compare("fundo") == 0 ){
+            continue;
+        }
 
-        int testSize = 3;
+        int testSize = 10;
 
         //#pragma omp parallel for ordered schedule(dynamic,3)
         for(int counter = 1; counter <= testSize; counter++){
@@ -575,6 +509,9 @@ int main(){
             
             Mat m1 = Mat::zeros(height,width,CV_8UC1);
             
+            for(int stepNum = 2; stepNum < 10; stepNum++){
+
+            
             map<string, Mat> outputImage;
             for(int objIdx = 0; objIdx < pconfig.number_objects; objIdx++){
                 
@@ -583,14 +520,16 @@ int main(){
 
             }
            
+
             int xRoot = 0; int xIter = 0;
             int yRoot = 0; int yIter = 0;
-            int xCropPixels = width/4;
-            int yCropPixels = height/4;
+            int xCropPixels = width/stepNum;
+            int yCropPixels = height/stepNum;
 
             //#pragma omp parallel for ordered schedule(dynamic,3)
-            for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/8,yIter++ ){          
-                for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/8,xIter++){
+            for(yRoot = 0; yRoot+yCropPixels < height; yRoot += height/(stepNum*2),yIter++ ){  
+                cout << "StepNum " << stepNum << "Stride " << stepNum*2 << endl;        
+                for(xRoot = 0; xRoot+xCropPixels < width; xRoot += width/(stepNum*2),xIter++){
                 
                     vector<KeyPoint> keypointsTest;
                     //cout << "xRoot = " << xRoot<< "yRoot = " << yRoot << endl;
@@ -603,31 +542,31 @@ int main(){
                     //cout << "keypoints" << keypointsTest.size();
                     if(keypointsTest.size() > 0){
                         bowDE.compute(croppedMat, keypointsTest, bowDescriptors);
+                        Mat rootDesc;
+                        rootDesc = SIFT2Root(bowDescriptors);
                         // cout << "keypoints size" << keypoints.size() << endl;
                         // cout << "Descriptors size" << bowDescriptors.size() << endl;
 
-                        Mat normalizedHist;
-                        normalize(bowDescriptors,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
-                
-                        for(int k = 100; k < 101; k++){
+                        //Mat normalizedHist;
+                        //normalize(bowDescriptors,normalizedHist,0,1,NORM_MINMAX,-1,noArray());
+                        float res;
+                        for(int k = 20; k < 21; k++){
                             Mat neighbors;
-                            float res = kNearestNeighbors->findNearest(bowDescriptors,k,noArray(),neighbors);
+                            res = kNearestNeighbors->findNearest(rootDesc,k,noArray(),neighbors);
                             cout << k << " nearest Neighbors " << res << " Neighbors " << neighbors << endl;
                         }
+
+                        for(int i = 0; i < xCropPixels; i++){
+                            for(int j = 0; j <yCropPixels; j++){
+                                
+                                outputImage[pconfig.filepaths_objs[(int)res]].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
+                            }                  
+                        }  
+
+
                         waitKey(32);
-                        //for(map<string,Ptr<ml::SVM> >::iterator it = oneToAllSVM.begin(); it !=  oneToAllSVM.end();++it){
-                        //    float res = (*it).second->predict(bowDescriptors);
-                        //   // cout << "Classifier: " << (*it).first << "Prediction: " << res << endl;
-//
-                        //    if(res){
-                        //        for(int i = 0; i < xCropPixels; i++){
-                        //            for(int j = 0; j <yCropPixels; j++){
-                        //                outputImage[(*it).first].at<uchar>(yRoot+j,xRoot+i) = croppedMat.at<uchar>(j,i);
-                        //            }                  
-                        //        }  
-                        //    } 
-                        //}   
-                    }
+
+                    };
                 }
             }
 
@@ -644,8 +583,12 @@ int main(){
             //    outputImage[(*it).first] = Mat::zeros(height,width,CV_8UC1);
             //}
             //showImage("masked",inputIMG);
+            for(int numObjs = 0; numObjs < pconfig.number_objects;numObjs++){
+                showImage(pconfig.filepaths_objs[numObjs],outputImage[pconfig.filepaths_objs[numObjs]]);
+                outputImage[pconfig.filepaths_objs[numObjs]] = Mat::zeros(height,width,CV_8UC1);
+            }
         }        
-
+        }
 
         cout << pconfig.filepaths_objs[obj_idx] << " done \n";
         
